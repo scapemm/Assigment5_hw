@@ -10,10 +10,12 @@ int main(){
     up=a.size()-low;
     cout << up <<' ';
     for(int i=0; i<a.size(); ++i){
-        if('A'<=a[i]) cout << a[i] << ' ';
+        if('Z'>=a[i]) cout << a[i] << ' ';
     }
     cout << "\n";
-    cout << low << ' ';
+    
+    if(low)cout << low << ' ';
+    else cout << low;
     for(int i=0; i<a.size(); ++i){
         if('a'<=a[i]) cout << a[i] << ' ';
     }
