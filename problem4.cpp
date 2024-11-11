@@ -7,11 +7,14 @@ int main(){
     int res=0;
     for(int i=0; i<n; ++i) cin >> vec[i];
     int k=n-1;
-    for(int i=0; i<n && k!=i; ++i){
-      for(int j=k; j!=n-j; j--) res= max(res,vec[j]-vec[i]);
-        k--;
-        if(k==i) break;
+    int i=0;
+    while(i<=k){
+      for(int h=0; h<=k; h++)
+      res= max(vec[k]-vec[h],res);
+      i++;
+      k--;
     }
+    
     cout << res;
     return 0;
     
