@@ -10,6 +10,7 @@ int main(){
     for(int i=0; i<n; ++i){
       if(n-k>i)res=max(res,vec[k]-vec[i]);
       else break;
+        k--;
     }
     cout << res;
     return 0;
