@@ -6,18 +6,12 @@ int main(){
     vector<int> vec(n);
     int res=0;
     for(int i=0; i<n; ++i) cin >> vec[i];
-    vector<int> rv(n);
+    int k=n-1;
     for(int i=0; i<n; ++i){
-        rv[i]=vec[i];
+      if(k>i)res=max(res,vec[k]-vec[i]);
+      else break;
     }
-    reverse(rv.begin(),rv.end());
-    int ans=0;
-    for(int i=0; i<n/2; ++i){
-        for(int j=0; j<n/2; ++j){
-            if(rv[i]-vec[i] > ans) ans=rv[i]-vec[i];
-        }
-    }
-    cout << ans;
+    cout << res;
     return 0;
     
 }
