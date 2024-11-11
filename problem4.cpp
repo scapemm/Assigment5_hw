@@ -8,7 +8,7 @@ int main(){
     for(int i=0; i<n; ++i) cin >> vec[i];
     int k=n-1;
     for(int i=0; i<n; ++i){
-      if(k>i)res=max(res,vec[k]-vec[i]);
+      if(n-k>i)res=max(res,vec[k]-vec[i]);
       else break;
     }
     cout << res;
